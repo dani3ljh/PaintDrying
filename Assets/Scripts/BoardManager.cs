@@ -38,11 +38,9 @@ public class BoardManager : MonoBehaviour
                 float x = -(numberCellsWidth - 1) / 2f * deltaW + deltaW * j;
 
                 GameObject cell = Instantiate(cellPrefab, new Vector3(x, y, 0), cellPrefab.transform.rotation, cellFolder);
-                RectTransform rect = cell.GetComponent<RectTransform>();
-
-                rect.sizeDelta = new Vector2(deltaW, deltaH);
-                rect.anchoredPosition = new Vector2(x, y);
-                cell.layer = 0;
+                
+                cell.transform.localScale = new Vector3(deltaW, deltaH, 1);
+                cell.transform.position = new Vector3(x, y, 0);
 
                 board[i, j] = cell;
                 boardState[i, j] = 1f;
