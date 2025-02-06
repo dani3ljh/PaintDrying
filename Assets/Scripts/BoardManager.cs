@@ -37,10 +37,9 @@ public class BoardManager : MonoBehaviour
             {
                 float x = -(numberCellsWidth - 1) / 2f * deltaW + deltaW * j;
 
-                GameObject cell = Instantiate(cellPrefab, new Vector3(x, y, 0), cellPrefab.transform.rotation, cellFolder);
+                GameObject cell = Instantiate(cellPrefab, new Vector3(x, y, 1), cellPrefab.transform.rotation, cellFolder);
                 
-                cell.transform.localScale = new Vector3(deltaW, deltaH, 1);
-                cell.transform.position = new Vector3(x, y, 0);
+                cell.transform.localScale = Vector3.Scale(cell.transform.localScale, new Vector3(deltaW, deltaH, 1));
 
                 board[i, j] = cell;
                 boardState[i, j] = 1f;

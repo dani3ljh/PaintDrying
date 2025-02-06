@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -243,10 +244,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0dccfc81ddaeb4e85e32b91d2255be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridWidth: 600
-  gridHeight: 300
-  numberCellsWidth: 12
-  numberCellsHeight: 6
+  gridWidth: 14
+  gridHeight: 8
+  numberCellsWidth: 14
+  numberCellsHeight: 8
   cellFolder: {fileID: 1277898739}
   cellPrefab: {fileID: 4964592805256283444, guid: 5bb363a842f5a414986b91e3033b0324, type: 3}
 --- !u!4 &622663366
